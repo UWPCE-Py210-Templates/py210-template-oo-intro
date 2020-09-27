@@ -1,6 +1,6 @@
 # py210-template-oo-intro
 
-## [Assignment Details](https://uwpce-pythoncert.github.io/ProgrammingInPython/exercises/trigrams/trigrams.html?highlight=trigram)
+## [Assignment Details](https://uwpce-pythoncert.github.io/ProgrammingInPython/exercises/oo_intro/oo_intro.html)
 Write your code in`intro_oo.py` file. 
 
 This assignment includes automated checks:
