@@ -1,8 +1,7 @@
 # py210-template-oo-intro
 
 ## [Assignment Details](https://uwpce-pythoncert.github.io/ProgrammingInPython/exercises/oo_intro/oo_intro.html)
-Write your code in`intro_oo.py` file. 
 
-This assignment includes automated checks:
-* python code style (review here: [Python Style and Linting](https://uwpce-pythoncert.github.io/PythonCertDevel/modules/Pep8.html))
-* automated tests
+Write your code in`report.py` file and a complete suite of tests in the test_report.py file.
+
+As usual, create a new branch for your work ("develop"), and then submit a Pull Request when you are ready for your code to be reviewed.
