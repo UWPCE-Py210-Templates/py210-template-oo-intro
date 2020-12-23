@@ -4,4 +4,3 @@
 
 Write your code in`report.py` file and a complete suite of tests in the test_report.py file.
 
-As usual, create a new branch for your work ("develop"), and then submit a Pull Request when you are ready for your code to be reviewed.
