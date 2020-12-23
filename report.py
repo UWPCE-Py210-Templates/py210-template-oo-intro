@@ -21,7 +21,7 @@ class Row:
         self.state = state
 
     def __str__(self):
-        return f"| {self.row_id} | {self.fname + ' ' + self.lname:<15} | {self.state} |"
+        return f"| {self.id} | {self.fname + ' ' + self.lname:<15} | {self.state} |"
 
 
 class Report:
