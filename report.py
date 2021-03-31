@@ -15,13 +15,13 @@ class Row:
     with ID, first name, last name and state attributes
     """
     def __init__(self, fname, lname, state):
-        self.id = str(uuid4())  # randomly generated unique ID
+        self.row_id = str(uuid4())  # randomly generated unique ID
         self.fname = fname
         self.lname = lname
         self.state = state
 
     def __str__(self):
-        return f"| {self.id} | {self.fname + ' ' + self.lname:<15} | {self.state} |"
+        return f"| {self.row_id} | {self.fname + ' ' + self.lname:<15} | {self.state} |"
 
 
 class Report:
