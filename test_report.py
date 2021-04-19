@@ -50,7 +50,7 @@ def test_row_id_unique():
     row1 = Row("Joe", "Camel", "WA")
     row2 = Row("Bob", "Camel", "WA")
 
-    assert row1.id != row2.id
+    assert row1.row_id != row2.row_id
 
 
 def test_report_length():
