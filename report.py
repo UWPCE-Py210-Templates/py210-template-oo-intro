@@ -26,7 +26,7 @@ class Row:
 
 class Report:
     def __init__(self, limit):
-        self.limit = limit
+        self.limit = limit  # specifies how many records (rows) a report should return by default
         self.rows = []
 
     def add_row(self, row):
@@ -52,22 +52,26 @@ class Report:
 
     def get_paged_rows(self, sort_field, page):
         """Return a list of rows for a specific page number
-        :param sort_field:  field to sort on, "name" or "-name" (descending)
+        :param sort_field:  field to sort on, for example "fname" or "-fname" (descending)
         :param page:        specific page for returning data
         :return:            list of row objects for specific page
 
         Hints:
         1. You'll want to determine if sort is reversed or not (remember that
-           sorted() takes in param for that) this is based on if the fields
-           start with a minus sign for DESCENDING sort
+           sorted() takes in param for that) this is based on if the field
+           starts with a minus sign for DESCENDING sort
         2. When sorting on passed in field you can use handy `operator` library
            with `attrgetter` method (look up official docs)
-        3. To actually determine what rows belong on the specific page you'll be
+        3. `page` parameter is used to determine what page number you'd like to display.
+           In a typical report you commonly see Page 1 of X with a default display size of Y rows per page,
+           this design allows a user to page through results without having to load all records in a single page.
+           
+           To actually determine what rows belong on the specific page you'll be
            using list slicing (remember the slicing lab?)
 
            Here is an illustration to help with the code logic:
 
-           The list has 6 rows => [<row1>, <row2>, <row3>, <row4>, <row5>, <row6>]
+           If a list has 6 rows => [<row1>, <row2>, <row3>, <row4>, <row5>, <row6>] and limit is set to 4 then
            for page=2 we expect to get => [<row5>, <row6>]
            with slicing you'll want to offset your list by 4 in this case
            (extra hint: we can define offset as `offset = (page - 1) * self.limit`)
