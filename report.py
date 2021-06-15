@@ -3,7 +3,7 @@
 """
 A set of classes to facilitate report writing
 """
-
+from typing import List
 import math
 import operator
 from uuid import uuid4
@@ -25,23 +25,23 @@ class Row:
 
 
 class Report:
-    def __init__(self, limit):
+    def __init__(self, limit: int):
         self.limit = limit  # specifies how many records (rows) a report should return by default
         self.rows = []
 
-    def add_row(self, row):
+    def add_row(self, row: Row):
         """Add a row object to the report"""
         pass
 
-    def remove_row(self, row_id):
+    def remove_row(self, row_id: str):
         """Remove a row object by the row's ID"""
         pass
 
-    def size(self):
+    def size(self) -> int:
         """Return how many total rows the report has"""
         pass
 
-    def get_number_of_pages(self):
+    def get_number_of_pages(self) -> int:
         """
         Get how many pages the report has; this will be based on limit variable.
         If your limit=4 and rows list has 6 records then there are two pages:
@@ -50,7 +50,7 @@ class Report:
         """
         pass
 
-    def get_paged_rows(self, sort_field, page):
+    def get_paged_rows(self, sort_field: str, page: int) -> List[Row]:
         """Return a list of rows for a specific page number
         :param sort_field:  field to sort on, for example "fname" or "-fname" (descending)
         :param page:        specific page for returning data
